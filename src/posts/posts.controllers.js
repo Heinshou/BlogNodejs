@@ -22,9 +22,9 @@ const getPostById = (id) => {
 const createPost = (data, user) => {
   const newPost = {
     id: uuid.v4(), //Obligatorio y unico
-    title: string, // Obligatorio
-    content: string, //Obligatorio
-    header_image: url_to_img,
+    title: data.title, // Obligatorio
+    content: data.content, //Obligatorio
+    header_image: data.header_image ? data.header_image : '',
     user_id: user,// Obligatorio
     published: true //obligatorio y por defecto true 
   };
